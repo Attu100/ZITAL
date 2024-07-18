@@ -1,5 +1,5 @@
 import {createStackNavigator} from "@react-navigation/stack"
-import { CartScreen } from "../Cart"
+import { CartScreen } from "../CartScreen"
 import { Checkout } from "../CheckOut"
 
 
