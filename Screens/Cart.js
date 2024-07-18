@@ -12,14 +12,14 @@ export function CartScreen({navigation}){
     <View style={styles.container} /* overall view*/>
       
       <View style={styles.Header}>
-          <Text style={{fontWeight:500,fontSize:30}}>cart summary</Text>
+          <Text style={styles.headerText}>cart summary</Text>
       </View>
       
       <View style={styles.cartCount} /* delivery view*/>
-        <Text style={{position:"absolute",left:10}}>cartCount : 0 </Text>
+        <Text style={styles.cartCountText}>Count : 0 </Text>
       </View>
       <View style={styles.cartCount} /* delivery view*/>
-        <Text style={{position:"absolute",left:10}}>Subtotal : $300</Text>
+        <Text style={styles.subtotal}>Subtotal : $300</Text>
       </View>
       
       <ScrollView style={styles.deliveryDetails} /*Details view*/>
@@ -52,13 +52,13 @@ export function CartScreen({navigation}){
               <Text style={{fontSize:30}}>1</Text>
             </View>
             
-            <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",position:"absolute",right:5}}>
-            <TouchableOpacity style={{width:40,margin:5,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>+</Text>
-              </TouchableOpacity>
+            <View style={styles.incrementContainer}>
+            <TouchableOpacity style={styles.incrementButton}>
+                <Text style={styles.incrementAndDecrementButton}>+</Text>
+            </TouchableOpacity>
             
-              <TouchableOpacity style={{width:40,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>-</Text>
+              <TouchableOpacity style={styles.decrementButton}>
+              <Text style={styles.incrementAndDecrementButton}>-</Text>
               </TouchableOpacity>
             </View>
             
@@ -99,13 +99,13 @@ export function CartScreen({navigation}){
               <Text style={{fontSize:30}}>1</Text>
             </View>
             
-            <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",position:"absolute",right:5}}>
-            <TouchableOpacity style={{width:40,margin:5,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>+</Text>
+            <View style={styles.incrementContainer}>
+            <TouchableOpacity style={styles.incrementButton}>
+              <Text style={styles.incrementAndDecrementButton}>+</Text>
               </TouchableOpacity>
             
-              <TouchableOpacity style={{width:40,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>-</Text>
+              <TouchableOpacity style={styles.decrementButton}>
+              <Text style={styles.incrementAndDecrementButton}>-</Text>
               </TouchableOpacity>
             </View>
             
@@ -143,13 +143,13 @@ export function CartScreen({navigation}){
               <Text style={{fontSize:30}}>1</Text>
             </View>
             
-            <View style={{flexDirection:"row",justifyContent:"center",alignItems:"center",position:"absolute",right:5}}>
-            <TouchableOpacity style={{width:40,margin:5,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>+</Text>
+            <View style={styles.incrementContainer}>
+            <TouchableOpacity style={styles.incrementButton}>
+              <Text style={styles.incrementAndDecrementButton}>+</Text>
               </TouchableOpacity>
             
-              <TouchableOpacity style={{width:40,backgroundColor:"#ffd700",borderRadius:10}}>
-              <Text style={{fontSize:40, padding:4,textAlign:"center",color:"white"}}>-</Text>
+              <TouchableOpacity style={styles.decrementButton}>
+              <Text style={styles.incrementAndDecrementButton}>-</Text>
               </TouchableOpacity>
             </View>
             
@@ -197,18 +197,30 @@ Header:{
   backgroundColor:"#f3f2f2",
   borderRadius:10
 },
+headerText:{
+  fontWeight:500,
+  fontSize:30
+},
 cartCount:{
   height:40,
   alignItems:"center",
   justifyContent:"center",
   borderRadius:10,
   backgroundColor:"#f3f2f2",
-position:"relative",
-margin:2
+  position:"relative",
+  margin:2
+}, 
+cartCountText:{
+  position:"absolute",
+  left:10
+},
+subtotal:{
+  position:"absolute",
+  left:10
 },
 deliveryDetails:{
-borderRadius:15,
-margin:7,
+  borderRadius:15,
+  margin:7,
   flexDirection:"column",
 
 },
@@ -217,7 +229,7 @@ goodsDetails:{
   padding:4,
   borderRadius:8,
   margin:2,
-backgroundColor:"#f3f2f2",
+  backgroundColor:"#f3f2f2",
   position:"relative"
 },
 goodsImage:{
@@ -254,12 +266,9 @@ optons:{
   flex:1,
  
 },
-
 removeButton:{
-
 position:"absolute",
 left:5, 
-
 },
 
 qauntity:{
@@ -288,10 +297,31 @@ checkOutBus:{
   height:40, 
   borderRadius:20,
    marginBottom:2
+},
+incrementContainer:{
+  flexDirection:"row",
+  justifyContent:"center",
+  alignItems:"center",
+  position:"absolute",
+  right:5
+},
+incrementButton:{
+  width:40,
+  margin:5,
+  backgroundColor:"#ffd700",
+  borderRadius:10
+},
+decrementButton:{
+  width:40,
+  backgroundColor:"#ffd700",
+  borderRadius:10
 
-}
-
-
+},
+incrementAndDecrementButton:{
+  fontSize:40, 
+  padding:4,
+  textAlign:"center",
+  color:"white"}
 })
 
  
