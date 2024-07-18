@@ -160,9 +160,8 @@ export function CartScreen({navigation}){
        
       </ScrollView> 
       <View style={styles.checkOutBus}>
-         <TouchableOpacity style={styles.checkOutButton}>
-           <Text style={{fontSize:30, fontWeight:500}}
-            onPress={() => navigation.navigate("Checkout")}>checkout</Text>
+         <TouchableOpacity style={styles.checkOutButton} onPress={() => navigation.navigate("Checkout")}>
+           <Text style={{fontSize:30, fontWeight:500}}>checkout</Text>
          </TouchableOpacity>
        </View>
     </View>
