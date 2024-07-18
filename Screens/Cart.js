@@ -1,7 +1,7 @@
 import { reauthenticateWithRedirect } from "firebase/auth"
 import {View,ScrollView,StatusBar,Text, StyleSheet, TouchableOpacity, Image, Button} from "react-native"
 import { Caption } from "react-native-paper"
-import { Checkout } from "./CheckOutScreen"
+import { Checkout } from "./CheckOut"
 export function CartScreen({navigation}){
   return (
 
@@ -161,7 +161,8 @@ export function CartScreen({navigation}){
       </ScrollView> 
       <View style={styles.checkOutBus}>
          <TouchableOpacity style={styles.checkOutButton}>
-           <Text style={{fontSize:30, fontWeight:500}} onPress={() => navigation.navigate("Checkout")}>checkout</Text>
+           <Text style={{fontSize:30, fontWeight:500}}
+            onPress={() => navigation.navigate("Checkout")}>checkout</Text>
          </TouchableOpacity>
        </View>
     </View>
