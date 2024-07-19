@@ -1,4 +1,4 @@
-import { reauthenticateWithRedirect } from "firebase/auth"
+
 import {View,ScrollView,StatusBar,Text, StyleSheet, TouchableOpacity, Image, Button} from "react-native"
 import { Caption } from "react-native-paper"
 import { Checkout } from "./CheckOut"
