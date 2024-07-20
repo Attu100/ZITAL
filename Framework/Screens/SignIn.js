@@ -40,7 +40,7 @@ return (
         }) .catch((e)=>console.log(e))
         console.log(value)
     }}
-    validationSchema={{}}
+    validationSchema={validation}
     >
         {(property)=>{
             return (
